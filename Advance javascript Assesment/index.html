@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+
+        <div class="box">
+
+                 <h1> Restaurant Booking </h1>
+            <form action="">
+                <br><br>
+                 <label for=""> Choice of booking </label>  <br>
+                <select name="booking" id="booking" required onchange="showclick()">  
+                    <option value="Full"> Full day Booking </option>
+                    <option value="Half"> Half day Booking </option>
+                    <option value="Hourly"> Hourly day Booking </option>
+                </select>
+                <br>
+                <br>
+                <label for=""> User Name </label><br> 
+                <input type="text" name="username" id="" placeholder="User name"><br><br>
+                
+                 <label for=""> Mobail Number</label> <br>
+                <input type="number" name="" id="number" placeholder="Mobail number"> <br> <br>
+               
+                <label for=""> Email </label> <br> 
+                <input type="email" name="" id="email" placeholder="Email"><br>
+                <br>
+                <label for=""> Number Of Person </label> <br>
+                <input type="text" name="" id="" placeholder="NO of person"> <br>
+                <br>
+              <label for=""> Date </label><br>
+                <input type="date" name="" id="date"><br><br>
+                <!-- <input type="time" name="" id="time"> -->
+                <!-- <input type="slot" name="" id=""><br><br> -->
+
+
+                <div class="slot" style="display: none;">
+                    <select name="" id="">
+                        
+                        <option value=""> Brekfast </option>
+                        <option value=""> Lunch </option>
+                        <option value=""> Dinner  </option>
+
+                    </select>
+                </div>
+                <div class="time" style="display: none;">
+                    <input type="time" name="" id="">
+                </div>
+                 <button> Submit </button>
+                <!-- <input type="submit" value="Submit"> -->
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function showclick(){
+           
+
+            const booking = document.querySelector("#booking").value;
+            const slot = document.querySelector(".slot")
+            const time = document.querySelector(".time")
+            slot.style.display="none";
+            time.style.display="none";
+            slot.style.margin="10px"
+            time.style.margin="10px";
+    
+            
+
+
+            if(booking==="Full")
+            {
+                slot.style.display="none";
+                time.style.display="none";
+                     
+            }
+            else if(booking==="Half")
+            {
+                slot.style.display="block";
+                time.style.display="none";
+             }
+         
+             else if(booking==="Hourly")
+             {
+                slot.style.display="none";
+                time.style.display="block";
+             }
+        
+        
+        }
+
+        
+        
+    </script>
+
+</body>
+</html>
